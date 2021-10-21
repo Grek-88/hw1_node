@@ -1,0 +1,25 @@
+{
+  "name": "hw1_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "start:dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grek-88/hw1_node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Grek-88/hw1_node/issues"
+  },
+  "homepage": "https://github.com/Grek-88/hw1_node#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  }
+}
