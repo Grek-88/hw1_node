@@ -3,6 +3,7 @@
 
 const operationContact = require("./contacts");
 
+// TODO : commander
 const { Command } = require("commander");
 const program = new Command();
 program
@@ -13,9 +14,9 @@ program
   .option("-p, --phone <type>", "user phone");
 
 program.parse(process.argv);
-
 const argv = program.opts();
 
+// common function
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case "list":
@@ -25,8 +26,8 @@ async function invokeAction({ action, id, name, email, phone }) {
 
     case "get":
       if (id) {
-        const allContacts = await operationContact.listContacts();
-        console.log("allContacts", allContacts);
+        const contactById = await operationContact.getContactById(id);
+        console.log("contactById", contactById);
         break;
       }
       console.log(" Enter id ");
