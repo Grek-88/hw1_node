@@ -21,5 +21,8 @@
   "homepage": "https://github.com/Grek-88/hw1_node#readme",
   "devDependencies": {
     "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
   }
 }
