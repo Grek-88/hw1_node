@@ -40,9 +40,11 @@ async function removeContact(contactId) {
 
     const delContact = await getContactById(contactId);
 
-    const newContacts = contacts.filter((el) => el.id !== contactId);
-    const newContatcsString = JSON.stringify(newContacts);
+    const newContacts = contacts.filter(
+      (el) => el.id !== contactId && el.id !== Number(contactId)
+    );
 
+    const newContatcsString = JSON.stringify(newContacts);
     await fs.writeFile(contactsPath, newContatcsString);
 
     return delContact;
